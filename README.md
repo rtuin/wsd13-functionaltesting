@@ -1,7 +1,6 @@
-Vagrant LAMP
-============
-
-My default LAMP development stack configuration for Vagrant.
+wsd13-functionaltesting
+=======================
+De Vagrantbox voor de workshop "Automatische acceptatietesten met Behat en Mink (Richard Tuin)" op zaterdag 27 april 2013
 
 Installation:
 -------------
@@ -22,6 +21,17 @@ Go to the repository folder and launch the box
 
     $ cd [repo]
     $ vagrant up
+
+
+ProTalk optional
+----------------
+
+To get an immediate start at the workshop, run installProtalk.sh to install a working copy of ProTalk.
+
+    $ vagrant ssh
+    $ cd /vagrant
+    $ installProtalk.sh
+
 
 What's inside:
 --------------
