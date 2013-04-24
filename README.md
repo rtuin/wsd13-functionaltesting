@@ -29,8 +29,15 @@ ProTalk optional
 To get an immediate start at the workshop, run installProtalk.sh to install a working copy of ProTalk.
 
     $ vagrant ssh
+    $ sudo su
     $ cd /vagrant
     $ installProtalk.sh
+    # PHP ini change popup => keep the local version currently installed   
+
+Wait and enjoy@
+
+Protalk login
+    admin  password 
 
 
 What's inside:

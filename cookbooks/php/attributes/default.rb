@@ -21,29 +21,17 @@
 lib_dir = kernel['machine'] =~ /x86_64/ ? 'lib64' : 'lib'
 
 default['php']['install_method'] = 'package'
+default['php']['directives'] = {}
 
-case node["platform"]
-when "centos", "redhat", "fedora"
-  default['php']['conf_dir']      = '/etc'
-  default['php']['ext_conf_dir']  = '/etc/php.d'
-  default['php']['fpm_user']      = 'nobody'
-  default['php']['fpm_group']     = 'nobody'
-  default['php']['ext_dir']       = "/usr/#{lib_dir}/php/modules"
-when "debian", "ubuntu"
-  default['php']['conf_dir']      = '/etc/php5/cli'
-  default['php']['ext_conf_dir']  = '/etc/php5/conf.d'
-  default['php']['fpm_user']      = 'www-data'
-  default['php']['fpm_group']     = 'www-data'
-else
-  default['php']['conf_dir']      = '/etc/php5/cli'
-  default['php']['ext_conf_dir']  = '/etc/php5/conf.d'
-  default['php']['fpm_user']      = 'www-data'
-  default['php']['fpm_group']     = 'www-data'
-end
+default['php']['conf_dir']      = '/etc/php5/cli'
+default['php']['ext_conf_dir']  = '/etc/php5/conf.d'
+default['php']['fpm_user']      = 'www-data'
+default['php']['fpm_group']     = 'www-data'
+default['php']['install_method']     = 'package'
+default['php']['packages']      = ['php5-cgi', 'php5', 'php5-dev', 'php5-cli', 'php-pear']
 
 default['php']['url'] = 'http://us.php.net/distributions'
-default['php']['version'] = '5.3.10'
-default['php']['checksum'] = 'ee26ff003eaeaefb649735980d9ef1ffad3ea8c2836e6ad520de598da225eaab'
+default['php']['version'] = '5.4'
 default['php']['prefix_dir'] = '/usr/local'
 
 default['php']['configure_options'] = %W{--prefix=#{php['prefix_dir']}
