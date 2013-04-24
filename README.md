@@ -7,7 +7,7 @@ Installation:
 
 Install [vagrant](http://vagrantup.com/)
 
-    $ gem install vagrant
+    $ gem install vagrant 
 
 Download and Install [VirtualBox](http://www.virtualbox.org/)
 
