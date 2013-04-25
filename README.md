@@ -31,7 +31,8 @@ To get an immediate start at the workshop, run installProtalk.sh to install a wo
     $ vagrant ssh
     $ sudo su
     $ cd /vagrant
-    $ installProtalk.sh
+    $ chmod +x InstallProtalk.sh
+    $ ./InstallProtalk.sh
     # PHP ini change popup => keep the local version currently installed   
 
 Wait and enjoy@
